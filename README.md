@@ -1,6 +1,7 @@
 # WeatherSphere Pro 🌤️
 
-![WeatherSphere Pro Screenshot](https://via.placeholder.com/800x500.png?text=WeatherSphere+Pro+Screenshot) <!-- Replace with actual screenshot -->
+![WeatherSphere Pro Screenshot](![WeatherSphere Pro Screenshot](Screenshot%202025-08-08%20231201.png)
+) <!-- Replace with actual screenshot -->
 
 WeatherSphere Pro is a modern, responsive weather application that provides accurate forecasts and real-time weather data for locations worldwide. Built with HTML, CSS, and JavaScript, it offers a clean, intuitive interface with dark/light mode support.
 
