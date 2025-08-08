@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherSphere Pro | Accurate Weather Forecasts</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌤️</text></svg>">
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="logo-container">
+        <div class="logo-icon">🌤️</div>
+        <div class="logo-text">
+          <span class="logo-primary">WeatherSphere</span>
+          <span class="logo-secondary">Pro</span>
+        </div>
+      </div>
+      <div class="search-container">
+        <div class="search-input-container">
+          <input type="text" id="search-input" placeholder="Search city..." class="search-input" />
+          <button id="search-btn" class="search-button" aria-label="Search">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button id="location-btn" class="location-button" aria-label="Use current location">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 0 1 8 8c0 5.4-7 11-8 11-1 0-8-5.6-8-11a8 8 0 0 1 8-8z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="current-weather">
+        <div class="weather-header">
+          <div class="location-container">
+            <h1 class="city" id="city-name">Loading...</h1>
+            <div class="date" id="current-date"></div>
+          </div>
+          <div class="weather-icon-container">
+            <div class="icon" id="weather-icon"></div>
+          </div>
+        </div>
+        
+        <div class="weather-data">
+          <div class="temperature-container">
+            <div class="temp" id="temp">--°C</div>
+            <div class="feels-like" id="feels-like">Feels like --°C</div>
+          </div>
+          
+          <div class="weather-details">
+            <div class="desc" id="weather-desc"></div>
+            <div class="detail-grid">
+              <div class="detail-item">
+                <div class="detail-icon">💧</div>
+                <div class="detail-text">
+                  <span class="detail-value" id="humidity"></span>
+                  <span class="detail-label">Humidity</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">💨</div>
+                <div class="detail-text">
+                  <span class="detail-value" id="wind-speed"></span>
+                  <span class="detail-label">Wind</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">🔆</div>
+                <div class="detail-text">
+                  <span class="detail-value" id="uv-index"></span>
+                  <span class="detail-label">UV Index</span>
+                </div>
+              </div>
+              <div class="detail-item">
+                <div class="detail-icon">⏱️</div>
+                <div class="detail-text">
+                  <span class="detail-value" id="pressure"></span>
+                  <span class="detail-label">Pressure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="forecast-section">
+        <h2 class="section-title">5-Day Forecast</h2>
+        <div class="forecast-container" id="forecast">
+          <!-- Forecast cards will be injected dynamically -->
+        </div>
+      </section>
+
+      <section class="hourly-section">
+        <h2 class="section-title">Hourly Forecast</h2>
+        <div class="hourly-container" id="hourly-forecast">
+          <!-- Hourly forecast will be injected dynamically -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="footer-content">
+        <div class="footer-logo">WeatherSphere Pro</div>
+        <div class="footer-info">
+          <span id="last-updated">Last updated: --</span>
+          <span>Powered by OpenWeatherMap API</span>
+        </div>
+        <div class="footer-copyright">© 2025 WeatherSphere. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="loading-overlay" id="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
