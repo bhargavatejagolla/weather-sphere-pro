@@ -47,5 +47,7 @@ To use your own OpenWeatherMap API key:
 ├── script.js           # Main JavaScript functionality
 └── README.md           # Project documentation
 ```
-## License 📄
-  --This project is licensed under the MIT License - see the LICENSE file for details.
+## Author
+**Golla Bhargava Teja**
+* 🌐 [LinkedIn](https://www.linkedin.com/in/golla-bhargava-teja/)  
+* 💻 [GitHub](https://github.com/bhargavatejagolla)
